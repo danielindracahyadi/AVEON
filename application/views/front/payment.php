@@ -9,11 +9,11 @@
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
 					<thead>
-						<tr class="cart_menu">
-							<td class="image">Item</td>
+						<tr class="cart_menu" style="background-color: #1dd1a1;">
+							<td class="image">Barang</td>
 							<td class="description"></td>
-							<td class="price">Price</td>
-							<!-- <td class="quantity">Quantity</td> -->
+							<td class="price">Harga</td>
+							<td class="quantity">Banyak</td>
 							<td class="total">Total</td>
 							<td></td>
 						</tr>
@@ -33,10 +33,11 @@
 								<h4><a href=""><?php echo $items['name']?></a></h4>
 							</td>
 							<td class="cart_price">
-								<p>$<?php echo $items['price']?></p>
+								<h4>Rp<?php echo $items['price']?></h4>
 							</td>
-							<!-- <td class="cart_quantity">
-								<div class="cart_quantity_button">
+							<td class="cart_quantity">
+								<h4><?php echo $items['qty']?></h4>
+								<!-- <div class="cart_quantity_button">
 									<form action="<?php echo base_url()?>update-cart-qty-payment" method="post">
 										<a class="cart_quantity_up" href=""> + </a>
 										<input class="cart_quantity_input" type="text" name="qty" value="<?php echo $items['qty']?>" autocomplete="off" size="2">
@@ -44,13 +45,13 @@
 										<input  type="hidden" name="rowid" value="<?php echo $items['rowid']?>">
 										<input  type="submit"  value="Update"/>
 									<form>
-								</div>
-							</td> -->
+								</div> -->
+							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$<?php echo $items['subtotal']?></p>
+								<p class="cart_total_price" style="color: #1dd1a1;">Rp<?php echo $items['subtotal']?></p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href="<?php echo base_url()?>delete-to-cart-payment/<?php echo $items['rowid']?>"><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="<?php echo base_url()?>delete-to-cart-payment/<?php echo $items['rowid']?>"><i class="fa fa-times" style="color: #ff5555;"></i></a>
 							</td>
 						</tr>
 						<?php } ?>
@@ -71,12 +72,18 @@
 							<?php 
 								$cart_total = $this->cart->total();
 							?>
-							<li>Cart Sub Total <span>$<?php echo $cart_total;?></span></li>
-							<?php
+							<li>Total belanja 
+								<span>
+									Rp<?php echo $cart_total;?>
+								</span>
+							</li>
+
+							<!-- <?php
 								$tax = ($cart_total*2)/100;
-							?>
-							<li>Eco Tax 2% <span>$<?php echo $tax?></span></li>
+							?> -->
+
 							<!-- Shipping Cost Dependend Quantity, price, buyer distance etc -->
+							<!-- <li>Eco Tax 2% <span>$<?php echo $tax?></span></li>
 							<?php
 								if($cart_total>0 && $cart_total<49){
 									$shiping = 0;
@@ -89,10 +96,21 @@
 								}elseif($cart_total==0){
 									$shiping = 0;
 								}
-							?>
-							<li>Shipping Cost <span>$<?php echo $shiping?></span></li>
-							<?php $g_total = $cart_total+$tax+$shiping;?>
-							<li>Total <span>$<?php echo $g_total;?></span></li>
+							?> -->
+
+							<li>Biaya pengiriman 
+								<span>
+									Rp<?php echo $shiping?>										
+								</span>
+							</li>
+							
+							<?php $g_total = $cart_total+$shiping;?>
+							<li><strong>Total 
+								<span>
+									Rp<?php echo $g_total;?>
+								</span>
+								</strong>
+							</li>
 						</ul>
 							<form action="<?php echo base_url()?>update-cart-qty-payment" method="post" >	
 							
@@ -100,19 +118,24 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<form action="<?php echo base_url()?>place-order" method="post" >
+					<!-- <form action="<?php echo base_url()?>place-order" method="post" >
+						<span>
+							<input type="submit" name="btn" class="btn btn-primary" style="background-color: #1dd1a1;" value="Selesai">
+						</span>
+					</form> -->
+					<form action="<?php echo base_url()?>place-order" method="post">
 						<div class="payment-options">
 							<div class="order-message">
 								<p class="alert alert-warning">Shipping Order</p>
 								<?php echo $this->session->flashdata("flash_msg")?>
 								<textarea name="payment_message"  placeholder="Notes about your order, Special Notes for Delivery" rows="10"></textarea>
-							</div>	
+							</div>
 							<span>
-								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> Cash on delivery</label>
+								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> COD(Cash on delivery)</label>
 							</span>
-							<!-- <span>
-								<label><input type="radio"  name="payment_gateway" value="paypal_payment"> Paypal</label>
-							</span> -->
+							<span>
+								<label><input type="radio"  name="payment_gateway" value="paypal_payment"> BCA</label>
+							</span>
 							<span>
 								<input type="submit" name="btn" class="btn btn-primary" value="Place Order">
 							</span>

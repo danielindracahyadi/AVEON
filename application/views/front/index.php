@@ -46,7 +46,7 @@
 						echo $category_brand;
 					}?>
 				
-				<div class="col-sm-9 padding-right">
+				<div class="col-sm-12">
 					<?php if(isset($feature)){
 						echo $feature;
 					}?>

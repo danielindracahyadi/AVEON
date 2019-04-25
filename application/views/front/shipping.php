@@ -1,3 +1,4 @@
+
 <style type="text/css">
 	.shipping_info p{color:red;font-weight: bold;font-size: 12px}
 </style>
@@ -8,10 +9,10 @@
 				  <li><a href="<?php echo base_url();?>">Home</a></li>
 				  <li class="active">Check out</li>
 				</ol>
-			</div><!--/breadcrums-->
+			</div>
 
 			<div class="step-one">
-				<h2 class="heading">Step2</h2>
+				<h2 class="heading">Step 2</h2>
 			</div>
 		
 			<div class="shopper-informations">
@@ -60,7 +61,7 @@
 			</div>
 			
 		</div>
-	</section> <!--/#cart_items-->
+	</section>
 	<script type="text/javascript">
 		
 		

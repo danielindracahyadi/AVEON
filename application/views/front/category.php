@@ -1,6 +1,6 @@
-<div class="col-sm-3">
-	<div class="left-sidebar">
-		<h2>Category</h2>
+<!-- <div class="row"> -->
+	<div class="col-sm-12">
+		<h2 style="color: #1dd1a1; text-align: center;">Category</h2>
 		<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 			<?php $all_category = $this->CategoryModel->get_all_category();?>
 			<?php $all_brands = $this->BrandModel->get_all_brand();?>
@@ -107,4 +107,4 @@
 		<!--/shipping-->
 		
 	</div>
-</div>
+<!-- </div> -->

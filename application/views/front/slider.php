@@ -22,10 +22,10 @@
 			?>
 			
 				<div class="col-sm-6">
-					<h1><span>E</span>-SHOPPER</h1>
+					<h1><i><span style="color: #1dd1a1;">A</span>VEON</i></h1>
 					<h2><?php echo $slider->pro_title;?></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<button type="button" class="btn btn-default get">Get it now</button>
+					<button type="button" class="btn btn-default get" style="background-color: #1dd1a1;">Get it now</button>
 				</div>
 				<div class="col-sm-6">
 					<img src="<?php echo base_url().$slider->pro_image;?>" class="girl img-responsive" alt="" />
