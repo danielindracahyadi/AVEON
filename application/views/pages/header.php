@@ -1,15 +1,24 @@
 <header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
+	<!--header_top-->
+		<!-- <div class="header_top" style="background-color: #10171e;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> (021) 123456</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@aveon.com</a></li>
+								<li>
+									<a href="#" style="color: #f1f2f2;">
+										<i class="fa fa-phone" style="color: #f1f2f2;"></i>  (021) 123456
+									</a>
+								</li>
+								<li>
+									<a href="#" style="color: #f1f2f2;">
+										<i class="fa fa-envelope" style="color: #f1f2f2;"></i>  info@aveon.com
+									</a>
+								</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 					<!-- <div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
@@ -21,11 +30,12 @@
 							</ul>
 						</div>
 					</div> -->
-				</div>
+<!-- 				</div>
 			</div>
-		</div><!--/header_top-->
+		</div> -->
+		<!--/header_top-->
 		<!--header-middle-->
-		<div class="header-middle">
+		<div class="header-middle" style="background-color: #10171e;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
@@ -57,10 +67,10 @@
 						</div> -->
 					</div>
 					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
+						<!-- <div class="shop-menu pull-right"> -->
+							<ul class="nav navbar-nav navbar-right">
 								
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#" style="color: #f1f2f2;"><i class="fa fa-user" style="color: #1dd1a1;"></i> Akun</a></li>
 								<!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<?php $customer_id = $this->session->userdata('cus_id');?>
 								<?php $shipping_id = $this->session->userdata('shipping_id');?>
@@ -86,17 +96,17 @@
 									<?php } ?> -->
 								<li>
 									<?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){?>
-									<a href="<?php echo base_url()?>payment"><i class="fa fa-credit-card"></i>Payment</a>
+									<a href="<?php echo base_url()?>payment" style="color: #f1f2f2;"><i class="fa fa-credit-card" style="color: #1dd1a1;"></i>Pembayaran</a>
 									<?php } ?>
 								</li>
 								<li>	
-									<a href="<?php echo base_url()?>show-cart"><i class="fa fa-shopping-cart"></i>
+									<a href="<?php echo base_url()?>show-cart" style="color: #f1f2f2;"><i class="fa fa-shopping-cart" style="color: #1dd1a1;"></i>
 									<?php $cart_items =  $this->cart->total_items();
 										if($cart_items>0){
 									?> 
-									 Cart(<?php echo $cart_items;?>)
+									 Keranjang(<?php echo $cart_items;?>)
 									 <?php }else{?>
-									  Cart(empty)
+									  Keranjang(0)
 									 <?php } ?>
 									</a>
 
@@ -105,16 +115,16 @@
 									
 								if($customer_id){?>
 								<li>
-									<a href="<?php echo base_url()?>logout"><i class="fa fa-lock"></i> Logout</a>
+									<a href="<?php echo base_url()?>logout" style="color: #f1f2f2;"><i class="fa fa-lock" style="color: #1dd1a1;"></i> Keluar</a>
 								</li>
 								<?php }else{ ?>
 								<li>
-									<a href="<?php echo base_url()?>checkout"><i class="fa fa-lock"></i> Login</a>
+									<a href="<?php echo base_url()?>checkout" style="color: #f1f2f2;"><i class="fa fa-lock" style="color: #1dd1a1;"></i> Masuk</a>
 								</li>
 								<?php } ?>
 								
 							</ul>
-						</div>
+						<!-- </div> -->
 					</div>
 				</div>
 			</div>

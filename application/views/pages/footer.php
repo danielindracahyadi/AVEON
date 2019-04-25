@@ -146,11 +146,11 @@
 			</div>
 		</div> -->
 		
-		<div class="footer-bottom">
+		<div class="footer-bottom" style="background-color: #10171e;">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2019 Aveon. All rights reserved.</p>
-					<p class="pull-right">Develop by <span><a target="_blank" href="#">Aveon Company</a></span></p>
+					<p class="pull-left" style="color: #f1f2f2;">Copyright © 2019 Aveon. All rights reserved.</p>
+					<p class="pull-right" style="color: #f1f2f2;">Develop by <span><a href="#" style="color: #1dd1a1;">Aveon Company</a></span></p>
 				</div>
 			</div>
 		</div>
