@@ -9,7 +9,7 @@
 	<script src="<?php echo base_url()?>assets/front/js/contact.js"></script>
 
 	<script src="<?php echo base_url()?>assets/front/js/main.js"></script>
-	<!-- Price Range Script Start-->
+	<!-- Interval Harga-->
 	<script type="text/javascript">  
  $(function() {
     $( "#slider-range" ).slider({
