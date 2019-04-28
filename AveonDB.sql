@@ -8,10 +8,7 @@ CREATE TABLE `tbl_brand` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `tbl_brand` (`brand_id`, `brand_name`) VALUES
-(6, 'Asus'),
-(5, 'HP'),
-(7, 'Dell'),
-(8, 'Samsung');
+(6, 'AVEON');
 
 CREATE TABLE `tbl_category` (
   `category_id` int(11) NOT NULL,
@@ -120,13 +117,13 @@ CREATE TABLE `tbl_product` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `tbl_product` (`pro_id`, `pro_title`, `pro_desc`, `pro_cat`, `pro_sub_cat`, `pro_brand`, `pro_price`, `pro_quantity`, `pro_availability`, `pro_status`, `pro_image`, `top_product`) VALUES
-(53, 'Samsung j7', '<p>Samsung j5</p>\r\n', 71, 0, 8, 100, -81, 1, 1, 'uploads/j7.jpeg', 1),
-(56, 'Asus Monitor', '<p>Asus Monitor</p>\r\n', 74, 0, 8, 20, -67, 1, 1, 'uploads/asus.jpg', 1),
-(57, 'Samsung Laptop', '<p>Samsung Laptop</p>\r\n', 76, 0, 8, 200, 7, 1, 1, 'uploads/Notebook9-PCD.jpg', 1),
+(53, 'Samsung j7', '<p>Samsung j5</p>\r\n', 71, 0, 6, 100, -81, 1, 1, 'uploads/j7.jpeg', 1),
+(56, 'Asus Monitor', '<p>Asus Monitor</p>\r\n', 74, 0, 6, 20, -67, 1, 1, 'uploads/asus.jpg', 1),
+(57, 'Samsung Laptop', '<p>Samsung Laptop</p>\r\n', 76, 0, 6, 200, 7, 1, 1, 'uploads/Notebook9-PCD.jpg', 1),
 (58, 'Latest Watch', '', 73, 0, 6, 20, 7, 1, 1, 'uploads/asus_watch.png', NULL),
 (59, 'Latest Men Watch', '<p>Latest Men Watch</p>\r\n', 73, 0, 6, 50, 1, 1, 1, 'uploads/watch.jpg', 1),
 (60, 'Asus Mouse', '<p>Asus Mouse</p>\r\n', 75, 26, 6, 30, 12, 1, 1, 'uploads/asus1.jpg', 1),
-(74, 'Latest Watch', '<p>Latest Watch</p>\r\n', 73, 28, 8, 400, 4, 1, 1, 'uploads/women_watch.jpg', 1);
+(74, 'Latest Watch', '<p>Latest Watch</p>\r\n', 73, 28, 6, 400, 4, 1, 1, 'uploads/women_watch.jpg', 1);
 
 
 CREATE TABLE `tbl_shipping` (
