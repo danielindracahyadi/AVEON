@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | E-Shopper</title>
+	<title>AVEON - Comfort never goes out of style</title>
 	<link href="<?php echo base_url()?>assets/front/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/front/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/front/css/prettyPhoto.css" rel="stylesheet">
