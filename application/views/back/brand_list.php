@@ -1,15 +1,11 @@
-
-<div id="page-wrapper">
+<!-- <div id="page-wrapper">
     <div class="row">
-         <!--  page header -->
         <div class="col-lg-12">
             <h1 class="page-header">Tables</h1>
         </div>
-         <!-- end  page header -->
     </div>
      <div class="row">
         <div class="col-lg-12">
-            <!-- Advanced Tables -->
             <div class="panel panel-default">
                 <div class="panel-heading">
                      Brand Tables
@@ -56,14 +52,12 @@
                     
                 </div>
             </div>
-            <!--End Advanced Tables -->
         </div>
     </div>
 </div>
     <script src="<?php echo base_url()?>assets/back/plugins/dataTables/jquery.dataTables.js"></script>
-   
     <script>
         $(document).ready(function () {
             $('#dataTables-example').dataTable();
         });
-    </script> 
+    </script>  -->

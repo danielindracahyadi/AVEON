@@ -5,8 +5,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootsrtap Free Admin Template - SIMINTA | Admin Dashboad Template</title>
-  <!-- Core CSS - Include with every page -->
+  <title>Admin AVEON Company</title>
+
   <link href="<?php echo base_url()?>assets/back/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
   <link href="<?php echo base_url()?>assets/back/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link href="<?php echo base_url()?>assets/back/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
 
         <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
-              <img src="<?php echo base_url()?>assets/back/img/logo.png" alt=""/>
+              <img src="<?php echo base_url()?>assets/front/logo.png" alt=""/>
           </div>
           <div class="col-md-4 col-md-offset-4">
             <div class="login-panel panel panel-default">                  
@@ -32,7 +32,7 @@
                          echo $success_message;
                      }?>
                      </p>
-                    <h3 class="panel-title">Please Sign In</h3>
+                    <h3 class="panel-title">Masukkan Informasi Admin</h3>
                     <p class="text-danger"> 
                      <?php
                           if(isset($error_message)){
@@ -49,12 +49,12 @@
                     <div class="form-group">
                         <input class="form-control" placeholder="Password" name="user_password" type="password" value="">
                     </div>
-                    <div class="checkbox">
+                    <!-- <div class="checkbox">
                         <label>
                             <input name="remember" type="checkbox" value="Remember Me">Remember Me
                         </label>
-                    </div>
-                    <button class="btn btn-lg btn-success btn-block" name="remember" type="checkbox" value="Remember Me">Login</button>
+                    </div> -->
+                    <button class="btn btn-lg btn-success btn-block">Masuk</button>
                 </fieldset>
             </form>
         </div>
@@ -62,7 +62,7 @@
 </div>
 </div>
 </div>
-<!-- Core Scripts - Include with every page -->
+
 <script src="<?php echo base_url()?>assets/back/plugins/jquery-1.10.2.js"></script>
 <script src="<?php echo base_url()?>assets/back/plugins/bootstrap/bootstrap.min.js"></script>
 <script src="<?php echo base_url()?>assets/back/plugins/metisMenu/jquery.metisMenu.js"></script>

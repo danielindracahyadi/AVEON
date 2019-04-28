@@ -1,4 +1,3 @@
-
 <div class="features_items"><!--features_items-->
 	<h2 class="title text-center">Product Items</h2>
 	<?php foreach ($search_data as $value) {?>

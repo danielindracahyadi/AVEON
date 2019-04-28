@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata($session_data);
 				redirect("Admin");
 			} else {
-				$data['error_message'] = "U Are Not An Active User...!";
+				$data['error_message'] = "Failed to login";
 				$this->load->view('login',$data);
 			}
 		}else{
@@ -38,12 +38,12 @@ class Login extends CI_Controller {
 		}
 	}
 	public function login_error(){
-		$data['error_message'] = "Incorrect Username Or Password...!";
+		$data['error_message'] = "Username atau Password salah!";
 			$this->load->view('login',$data);
 	}
 	public function adminlogout(){
 		$this->session->sess_destroy();
-		$data['success_message'] = "Successfully Logout...!";
+		$data['success_message'] = "Berhasil Keluar!";
 		$this->load->view('login',$data);	
 	}
 }
