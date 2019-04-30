@@ -8,7 +8,9 @@ CREATE TABLE `tbl_brand` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `tbl_brand` (`brand_id`, `brand_name`) VALUES
-(6, 'AVEON');
+(5, 'AVEONWear'),
+(6, 'AVEONBottom'), 
+(7, 'AVEONAccessories');
 
 CREATE TABLE `tbl_category` (
   `category_id` int(11) NOT NULL,
@@ -17,12 +19,9 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_status`) VALUES
-(73, 'Watch', 1),
-(72, 'Laptop', 1),
-(71, 'Mobile', 1),
-(74, 'Monitor', 1),
-(75, 'Mouse', 1),
-(76, 'PC', 1);
+(71, 'Atasan', 1),
+(72, 'Bawahan', 1),
+(73, 'Aksesoris', 1);
 
 CREATE TABLE `tbl_contact` (
   `contact_id` int(11) NOT NULL,
@@ -117,13 +116,18 @@ CREATE TABLE `tbl_product` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `tbl_product` (`pro_id`, `pro_title`, `pro_desc`, `pro_cat`, `pro_sub_cat`, `pro_brand`, `pro_price`, `pro_quantity`, `pro_availability`, `pro_status`, `pro_image`, `top_product`) VALUES
-(53, 'Samsung j7', '<p>Samsung j5</p>\r\n', 71, 0, 6, 100, -81, 1, 1, 'uploads/j7.jpeg', 1),
-(56, 'Asus Monitor', '<p>Asus Monitor</p>\r\n', 74, 0, 6, 20, -67, 1, 1, 'uploads/asus.jpg', 1),
-(57, 'Samsung Laptop', '<p>Samsung Laptop</p>\r\n', 76, 0, 6, 200, 7, 1, 1, 'uploads/Notebook9-PCD.jpg', 1),
-(58, 'Latest Watch', '', 73, 0, 6, 20, 7, 1, 1, 'uploads/asus_watch.png', NULL),
-(59, 'Latest Men Watch', '<p>Latest Men Watch</p>\r\n', 73, 0, 6, 50, 1, 1, 1, 'uploads/watch.jpg', 1),
-(60, 'Asus Mouse', '<p>Asus Mouse</p>\r\n', 75, 26, 6, 30, 12, 1, 1, 'uploads/asus1.jpg', 1),
-(74, 'Latest Watch', '<p>Latest Watch</p>\r\n', 73, 28, 6, 400, 4, 1, 1, 'uploads/women_watch.jpg', 1);
+(53, 'Sepatu 1', '<p>Sepatu 1</p>\r\n', 73, 29, 7, 100, -81, 1, 1, 'uploads/sepatu/sepatu1-1.png', 1),
+(56, 'Sepatu 2', '<p>Sepatu 2</p>\r\n', 73, 29, 7, 100, -67, 1, 1, 'uploads/sepatu/sepatu2-1.png', 1),
+(57, 'Sepatu 3', '<p>Sepatu 3</p>\r\n', 73, 29, 7, 100, 7, 1, 1, 'uploads/sepatu/sepatu3-1.png', 1),
+(58, 'Tas 1', '<p>Tas 1</p>', 73, 30, 7, 50, 7, 1, 1, 'uploads/tas/tas1-1.png', NULL),
+(59, 'Tas 2', '<p>Tas 2</p>\r\n', 73, 30, 7, 50, 1, 1, 1, 'uploads/tas/tas2-1.png', 1),
+(60, 'Tas 3', '<p>Tas 3</p>\r\n', 73, 30, 7, 50, 12, 1, 1, 'uploads/tas/tas3-1.jpg', 1),
+(61, 'Kemeja 1', '<p>Kemeja 1</p>\r\n', 71, 27, 5, 50, 12, 1, 1, 'uploads/kemeja/kemeja1-1.jpg', 1),
+(62, 'Kemeja 2', '<p>Kemeja 2</p>\r\n', 71, 27, 5, 50, 12, 1, 1, 'uploads/kemeja/kemeja2-1.jpg', 1),
+(63, 'Kaos 1', '<p>Kaos 1</p>\r\n', 71, 26, 5, 50, 12, 1, 1, 'uploads/kaos/kaos1-1.png', 1),
+(64, 'Kaos 2', '<p>Kaos 2</p>\r\n', 71, 26, 5, 50, 12, 1, 1, 'uploads/kaos/kaos2-1.png', 1),
+(65, 'Celana 1', '<p>Celana 1</p>\r\n', 72, 28, 6, 50, 12, 1, 1, 'uploads/celana/celana1-1.png', 1),
+(66, 'Celana 2', '<p>Celana 2</p>\r\n', 72, 28, 6, 50, 12, 1, 1, 'uploads/celana/celana2-1.png', 1);
 
 
 CREATE TABLE `tbl_shipping` (
@@ -153,13 +157,11 @@ CREATE TABLE `tbl_sub_category` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `tbl_sub_category` (`sub_cat_id`, `sub_category_name`, `category_sub_id`) VALUES
-(29, 'ASUS', 76),
-(30, 'Symphony', 71),
-(28, 'Women Watches', 73),
-(26, 'Hp 22er', 74),
-(27, 'Men watch', 73),
-(25, 'Bloody', 75),
-(33, 'Asus', 75);
+(26, 'Kaos', 71),
+(27, 'Kemeja', 71),
+(28, 'Celana', 72),
+(29, 'Sepatu', 73),
+(30, 'Tas', 73);
 
 CREATE TABLE `tbl_user` (
   `user_id` int(11) NOT NULL,
