@@ -70,7 +70,9 @@
 						<!-- <div class="shop-menu pull-right"> -->
 							<ul class="nav navbar-nav navbar-right">
 								
-								<li><a href="#" style="color: #f1f2f2;"><i class="fa fa-user" style="color: #1dd1a1;"></i> Akun</a></li>
+								<li>
+									<a href="#" style="pointer-events: none; color: #1dd1a1">Hi, <?php echo $this->session->userdata("cus_name");?></a>
+								</li>
 								<!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<?php $customer_id = $this->session->userdata('cus_id');?>
 								<?php $shipping_id = $this->session->userdata('shipping_id');?>
