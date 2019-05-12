@@ -70,12 +70,20 @@
 						<!-- <div class="shop-menu pull-right"> -->
 							<ul class="nav navbar-nav navbar-right">
 								
-								<li>
-									<a href="#" style="pointer-events: none; color: #1dd1a1">Hi, <?php echo $this->session->userdata("cus_name");?></a>
-								</li>
 								<!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<?php $customer_id = $this->session->userdata('cus_id');?>
 								<?php $shipping_id = $this->session->userdata('shipping_id');?>
+
+								<?php
+
+								if($customer_id) { ?>
+									
+									<li>
+										<a href="#" style="pointer-events: none; color: #1dd1a1">Hi, <?php echo $this->session->userdata("cus_name");?></a>
+									</li>
+								<?php }
+								else{ ?>
+								<?php } ?>
 
 									<!-- <?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){
 										?>
