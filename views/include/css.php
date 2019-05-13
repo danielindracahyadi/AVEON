@@ -18,3 +18,33 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url()?>assets/front/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url()?>assets/front/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo base_url()?>assets/front/images/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+.payment-method {
+  display: flex;
+  margin-bottom: 0px;
+  justify-content: space-between;
+}
+.method {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  padding-top: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: rgb(249, 249, 249);
+  justify-content: center;
+  align-items: center;
+}
+.blue-border{
+	border: 1px solid rgb(110, 178, 251);
+}
+.radio-input {
+  margin-top: 20px;
+}
+input[type='radio'] {
+  display: inline-block;
+}
+</style>
