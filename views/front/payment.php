@@ -1,3 +1,4 @@
+
 <section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
@@ -51,7 +52,7 @@
 								<p class="cart_total_price" style="color: #1dd1a1;">Rp<?php echo $items['subtotal']?></p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href="<?php echo base_url()?>delete-to-cart-payment/<?php echo $items['rowid']?>"><i class="fa fa-times" style="color: #ff5555;"></i></a>
+								<a class="cart_quantity_delete" href="<?php echo base_url()?>delete-to-cart-payment/<?php echo $items['rowid']?>"><i class="fa fa-times" style="color: #1dd1a1;"></i></a>
 							</td>
 						</tr>
 						<?php } ?>
@@ -83,20 +84,20 @@
 							?> -->
 
 							<!-- Shipping Cost Dependend Quantity, price, buyer distance etc -->
-							<!-- <li>Eco Tax 2% <span>$<?php echo $tax?></span></li>
+							<!-- <li>Eco Tax 2% <span>$<?php echo $tax?></span></li>-->
 							<?php
-								if($cart_total>0 && $cart_total<49){
+								if($cart_total>0 && $cart_total<=100000){
 									$shiping = 0;
-								}elseif($cart_total>50 && $cart_total<98){
-									$shiping = 2;
-								}elseif($cart_total>99 && $cart_total<198){
-									$shiping = 5;
-								}elseif($cart_total>199){
-									$shiping = 10;
+								}elseif($cart_total>100000 && $cart_total<=150000){
+									$shiping = 10000;
+								}elseif($cart_total>150000 && $cart_total<=200000){
+									$shiping = 20000;
+								}elseif($cart_total>200000){
+									$shiping = 30000;
 								}elseif($cart_total==0){
 									$shiping = 0;
 								}
-							?> -->
+							?> 
 
 							<li>Biaya pengiriman 
 								<span>
@@ -128,17 +129,44 @@
 							<div class="order-message">
 								<p class="alert alert-warning">Shipping Order</p>
 								<?php echo $this->session->flashdata("flash_msg")?>
-								<textarea name="payment_message"  placeholder="Notes about your order, Special Notes for Delivery" rows="10"></textarea>
+								<textarea name="payment_message"  placeholder="Catatan Pengiriman" rows="10"></textarea>
+							</div>
+
+							<div class="payment-method">
+								<label for="card" class="method card">
+									<img src="https://www.shoptab.net/blog/wp-content/uploads/2016/02/cashondelivery.gif"
+									style="height: 100px;"/>
+								<div class="radio-input">
+									<input id="card" type="radio" name="payment_gateway" value="cash_on_delivery" >
+									Pembayaran di lokasi
+									<br>
+									<br>
+									Pembatalan akan dikenakan denda
+								</div>
+								</label>
+
+								<label for="paypal" class="method paypal">
+								<img src="https://www.suaramerdeka.com/storage/images/2019/02/04/bca-5c57ad3870d25.png"
+									style="height: 100px;"/>
+								<div class="radio-input" style="padding-left:10px; padding-right:10px;">
+									<input id="paypal" type="radio" name="payment_gateway" value="paypal_payment">
+									Pembayaran menggunakan BCA
+									<br>
+									<br>
+									Transfer ke no rekening 700073812 atas nama Aveon Company
+								</div>
+								</label>
 							</div>
 							<span>
+								<input type="submit" name="btn" class="btn btn-primary" value="Order">
+							</span>
+							<!-- <span>
 								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> COD(Cash on delivery)</label>
 							</span>
 							<span>
 								<label><input type="radio"  name="payment_gateway" value="paypal_payment"> BCA</label>
-							</span>
-							<span>
-								<input type="submit" name="btn" class="btn btn-primary" value="Place Order">
-							</span>
+							</span> -->
+							
 						</div>
 					</form>
 				</div>
